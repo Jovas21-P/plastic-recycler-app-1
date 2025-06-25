@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: "Poppins", sans-serif;
+    padding-top: 70px;
+}
+
+#navega{
+    font-size: 20px;
+}
+
+.titulo{
+    margin-top: 100px;
+    text-align: center;
+}
+.logo{
+    text-align: center;
+}
+h1{
+    font-size: 80px;
+    background-color: rgb(33, 182, 13);   
+    color: white;
+    border-radius: 30px;
+}
+.cuerpo{
+    text-align: left;
+    font-size: 20px;
+}
+.cuerpo h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 60px;
+    background-color: rgb(33, 182, 13);   
+
+}
+
+.navbar {
+    text-align: center;
+}
+
+.navbar-brand img {
+    height: 40px; /* Ajusta la altura de la imagen según sea necesario */
+    width: auto; /* Mantiene la proporción de la imagen */
+}
+
+
+.navbar-nav .nav-link.active{
+    color: white;
+    background-color: rgb(33, 182, 13);
+    border-radius: 10px;
+}
+
+.nav-link:hover{
+    color: white;
+    background-color: rgb(33, 182, 13);
+    border-radius: 15px;
+    
+}
+
+#log{
+    border-radius: 50%;
+    height: auto;
+    width: auto;
+    margin: auto;
+    padding: 15px;
+}
+
+

@@ -1,0 +1,62 @@
+.navbar-div {
+    background-color: rgb(33, 182, 13);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+i {
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.car {
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.car:hover {
+    transform: scale(1.1);
+}
+
+.nav-underline .nav-link.active, .nav-underline .show>.nav-link {
+    font-weight: 700;
+    color: #fdfcfc;
+    border-bottom-color: currentcolor;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: rgb(63, 119, 11);
+}
+
+li {
+    margin: 0 20px;
+}
+
+.search {
+    position: relative;
+}
+
+#lupa {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: black;
+    transition: transform 0.3s ease-in-out;
+}
+
+#lupa:hover {
+    transform: scale(1.1);
+}
