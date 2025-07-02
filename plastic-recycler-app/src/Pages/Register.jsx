@@ -1,7 +1,7 @@
 import { Navbar } from '../components/Rutas';
 import { Link } from 'react-router-dom';
 import { Label } from '../components/Formulario';
-
+const url = import.meta.env.VITE_BACK_URL
 function Register() {
 
   const handleSubmit = async (e) => {
@@ -12,7 +12,7 @@ function Register() {
   const contra = form.contra.value;
 
   try {
-    const response = await fetch('http://localhost:3000/register', {
+    const response = await fetch(`${url}/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

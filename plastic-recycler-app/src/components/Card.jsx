@@ -25,9 +25,7 @@ function Card({ products }) {
         <h5 className="card-title">{products.title}</h5>
         <p className="card-text">{products.description}</p>
         <p className="text-center">{`${products.price}$ MXN por kilo`}</p>
-        <button  className={`btn ${btnClass}`} onClick={handleCartToggle}>
-          <i className={iconClass}></i>
-        </button>
+        
       </div>
     </div>
   );

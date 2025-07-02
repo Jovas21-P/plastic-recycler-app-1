@@ -2,6 +2,7 @@ import { Navbar } from '../components/Rutas';
 import { Link, useNavigate } from 'react-router-dom';
 import { Label } from '../components/Formulario';
 import { useAuth } from '../components/UserContext.jsx';  // importa el contexto
+const url = import.meta.env.VITE_BACK_URL
 
 function Login() {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ function Login() {
     const contra = form.contra.value;
 
     try {
-      const response = await fetch('http://localhost:3000/login', {
+      const response = await fetch(`${url}/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
