@@ -1,6 +1,7 @@
 import { useAuth } from "../components/UserContext";
 import { Navbar } from "../components/Rutas";
 import { useState } from "react";
+const url = import.meta.env.VITE_BACK_URL
 
 function Pedido() {
   const { user } = useAuth(); // Acceso al usuario autenticado
@@ -8,12 +9,17 @@ function Pedido() {
 
   if (!user) {
     return (
+      <>
+      <div className="nav">
+        <Navbar />
+      </div>
       <div className="container mt-5">
         <div className="alert alert-warning text-center" role="alert">
           ⚠️ Debes <strong>iniciar sesión</strong> para realizar un pedido. <br />
           Por favor, dirígete a la página de inicio de sesión.
         </div>
       </div>
+      </>
     );
   }
 
@@ -45,7 +51,7 @@ function Pedido() {
     }
 
     try {
-      const response = await fetch("http://localhost:3000/pedidos", {
+      const response = await fetch(`${url}/pedidos`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -95,7 +101,7 @@ function Pedido() {
 
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:3000/pedidos/${encodeURIComponent(tel)}`, {
+      const response = await fetch(`${url}/pedidos/${encodeURIComponent(tel)}`, {
         method: "GET",
         credentials: "include",
       });
