@@ -6,11 +6,18 @@ import { MONGO_URL, FRONTEND_URL, PORT } from "./config.js"
 // se incia el servidor
 const app = express()
 //configura sessions
+app.set('trust proxy', 1); // Importante en Render
+
 app.use(session({
   secret: 'secret',
   resave: false,
-  saveUninitialized: false
-}))
+  saveUninitialized: false,
+  cookie: {
+    secure: true,         // Solo se envía por HTTPS (Render ya usa HTTPS)
+    sameSite: 'none'      // Permite compartir la cookie entre dominios
+  }
+}));
+
 //  Configura cors
 app.use(cors({
     origin: FRONTEND_URL,
